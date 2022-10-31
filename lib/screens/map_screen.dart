@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:maps_flutter/blocs/location/location_bloc.dart';
 import 'package:maps_flutter/views/map_view.dart';
+import 'package:maps_flutter/widgets/btn_location.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
@@ -44,6 +45,12 @@ class _MapScreenState extends State<MapScreen> {
             ),
           );
         },
+      ),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: const [
+          BtnLocation()
+        ],
       ),
     );
   }
